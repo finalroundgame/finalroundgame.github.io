@@ -395,16 +395,16 @@ window.FR_DATA={
  },
  "roster": [
   {
+   "id": "fighter1",
+   "name": "Renegade"
+  },
+  {
    "id": "kaay",
    "name": "KAAY"
   },
   {
    "id": "computa",
    "name": "COMPUTA"
-  },
-  {
-   "id": "fighter1",
-   "name": "Renegade"
   },
   {
    "id": "blue_rift",
