@@ -40,6 +40,8 @@
     setTimeout(() => { sImg.src = `assets/stages/stage${si + 1}.webp`; sImg.alt = STAGES[si]; sImg.onload = () => sImg.classList.remove('swap'); }, 220);
     $('#stageNo').textContent = String(si + 1).padStart(2, '0'); $('#stageName').textContent = STAGES[si];
     thumbs.querySelectorAll('button').forEach((b, k) => b.classList.toggle('on', k === si)); }
+  { let sx = null; const box = $('.stage-show'); box.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+    box.addEventListener('touchend', e => { if (sx == null) return; const d = e.changedTouches[0].clientX - sx; if (Math.abs(d) > 40) showStage(si + (d < 0 ? 1 : -1)); sx = null; }); } // swipe stages on phones
   $('#stPrev').onclick = () => showStage(si - 1); $('#stNext').onclick = () => showStage(si + 1); showStage(0);
 
   // ---- scroll reveals ----
