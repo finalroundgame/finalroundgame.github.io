@@ -40,11 +40,11 @@ a { color: inherit; text-decoration: none; }
 /* hero */
 .hero { position: relative; height: 100svh; min-height: 640px; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; text-align: center; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-.hero-bg { position: absolute; inset: -3% -3% 10%; }
-.hero-bg::after { content: ''; position: absolute; inset: auto 0 0; height: 45%; background: linear-gradient(transparent, var(--bg)); }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; animation: kenburns 22s ease-in-out infinite alternate; }
+.hero-bg { position: absolute; inset: 0 0 clamp(150px, 20vh, 220px); overflow: hidden; }
+.hero-bg::after { content: ''; position: absolute; inset: auto 0 -1px; height: 26%; background: linear-gradient(transparent, var(--bg)); }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; animation: kenburns 22s ease-in-out infinite alternate; }
 @keyframes kenburns { from { transform: scale(1.02) translate3d(0,0,0); } to { transform: scale(1.1) translate3d(-1.2%, -1.5%, 0); } }
-.hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,7,10,.6) 0, transparent 20%, transparent 50%, rgba(7,7,10,.82) 80%, var(--bg)), radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.6)); pointer-events: none; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,7,10,.6) 0, transparent 20%, transparent 70%, rgba(7,7,10,.6) 86%, var(--bg)), radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.6)); pointer-events: none; }
 .fx-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; mix-blend-mode: screen; }
 .hero-copy { position: relative; z-index: 2; padding: 0 16px clamp(28px, 5vh, 56px); }
 .hero-logo { width: min(500px, 80vw); margin: 0 auto -6px; filter: drop-shadow(0 10px 30px rgba(0,0,0,.9)) drop-shadow(0 0 40px rgba(255,90,31,.3)); animation: logoIn 1s 1.6s cubic-bezier(.2,.9,.25,1) both; }
