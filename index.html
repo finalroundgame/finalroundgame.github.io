@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FINAL ROUND</title>
+<meta name="description" content="FINAL ROUND - a hand-painted 2D street fighting game. Pick your fighter. Finish the fight.">
+<meta property="og:title" content="FINAL ROUND">
+<meta property="og:description" content="Hand-painted 2D street fighting. Pick your fighter. Finish the fight.">
+<meta property="og:image" content="assets/media/cover.webp">
+<link rel="icon" href="assets/media/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=1">
+</head>
+<body>
+<div id="intro" aria-hidden="true"><img src="assets/media/logo.webp" alt=""><div class="slash"></div></div>
+
+<header class="nav">
+  <a href="#top" class="nav-logo"><img src="assets/media/logo.webp" alt="FINAL ROUND"></a>
+  <nav>
+    <a href="#fighters">Fighters</a><a href="#gameplay">Gameplay</a><a href="#stages">Stages</a><a href="#systems">Systems</a>
+  </nav>
+  <a href="#play" class="btn btn-sm">Play Now</a>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"><img src="assets/media/hero_bg.webp" alt="The FINAL ROUND roster"></div>
+    <canvas id="fxHero" class="fx-canvas"></canvas>
+    <div class="hero-shade"></div>
+    <div class="hero-copy">
+      <img class="hero-logo" src="assets/media/logo.webp" alt="">
+      <h1 class="sr">FINAL ROUND - every fight is the final round</h1>
+      <div class="hero-cta">
+        <a href="#play" class="btn">Play Now</a>
+        <a href="#fighters" class="btn btn-ghost">Meet the fighters</a>
+      </div>
+      <p class="kicker">Every fight is the final round</p>
+    </div>
+    <a href="#fighters" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- FIGHTERS -->
+  <section id="fighters" class="fighters">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Choose your fighter</h2></div>
+    <div class="select">
+      <div class="stage-view">
+        <div class="name-ghost" id="nameGhost"></div>
+        <img id="bigArt" class="big-art" alt="">
+        <div class="fighter-card">
+          <h3 id="fName"></h3>
+          <p id="fTag" class="tag"></p>
+          <div class="stats" id="fStats"></div>
+        </div>
+      </div>
+      <div class="grid" id="grid" role="listbox" aria-label="Fighters"></div>
+    </div>
+    <div class="moves-wrap">
+      <div class="moves-head"><h3>Move list</h3><span id="movesFor"></span></div>
+      <div class="moves" id="moves"></div>
+    </div>
+  </section>
+
+  <!-- GAMEPLAY -->
+  <section id="gameplay" class="gameplay">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Built to hit hard</h2></div>
+    <div class="video-frame">
+      <video src="assets/media/gameplay.mp4" poster="assets/media/gameplay_poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="pillars">
+      <div><b>Painted</b><span>Every pose, hit and effect is painted art - no flat sprites.</span></div>
+      <div><b>Weighty</b><span>Hit-stop, screen shake and smooth pose blending on every strike.</span></div>
+      <div><b>Brutal</b><span>Blood, finishers and supers that end rounds in style.</span></div>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section id="stages" class="stages">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Stages</h2></div>
+    <div class="stage-show">
+      <img id="stageImg" alt="">
+      <div class="stage-label"><small>Stage <span id="stageNo"></span></small><b id="stageName"></b></div>
+      <button class="arrow prev" id="stPrev" aria-label="Previous stage">&#8249;</button>
+      <button class="arrow next" id="stNext" aria-label="Next stage">&#8250;</button>
+    </div>
+    <div class="stage-thumbs" id="stageThumbs"></div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section id="systems" class="systems">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Fight systems</h2></div>
+    <div class="sys-grid">
+      <article><img src="assets/fx/fx02.webp" alt=""><h4>Specials</h4><p>Chainsaws, spiked bats, cleavers and pistols. Every fighter brings a signature special that charges as you fight.</p></article>
+      <article><img src="assets/fx/fx01.webp" alt=""><h4>Super gauge</h4><p>Land hits, build meter, then cash it in for a full cinematic combo chain.</p></article>
+      <article><img src="assets/fx/fx25.webp" alt=""><h4>Finishers</h4><p>Close the match with a brutal finisher - input it in time and end the fight for good.</p></article>
+      <article><img src="assets/fx/fx19.webp" alt=""><h4>Street feel</h4><p>Hit-stop, input buffering and jab chains tuned like the arcade classics.</p></article>
+    </div>
+  </section>
+
+  <!-- PLAY -->
+  <section id="play" class="play">
+    <canvas id="fxPlay" class="fx-canvas"></canvas>
+    <img src="assets/media/logo.webp" alt="FINAL ROUND" class="play-logo">
+    <p>Coming to Windows. Two players, one keyboard or controllers.</p>
+    <div class="hero-cta"><a class="btn" href="#play" aria-disabled="true">Coming soon</a></div>
+  </section>
+</main>
+
+<footer class="foot"><span>&copy; 2026 FINAL ROUND</span><span>All art hand-painted.</span></footer>
+
+<script src="js/data.js?v=1"></script>
+<script src="js/site.js?v=1"></script>
+</body>
+</html>
